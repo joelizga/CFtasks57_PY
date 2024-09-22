@@ -1,0 +1,370 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "d717e840-981d-47f0-9050-470177e3279c",
+   "metadata": {},
+   "source": [
+    "#01 Import Libraries"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "01a18485-ba46-41ba-b964-aeadf95cc908",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import os"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f9663834-7f95-49de-8036-8821d1aed300",
+   "metadata": {},
+   "source": [
+    "#02 Python Data Types"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "b5cdf992-4daa-4c9b-af7e-d1b26d6c1f19",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "n=50"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "81d6dc11-0d5d-404c-bfbf-a2413cf5bcd7",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "100"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "n+n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "4c643648-f681-4ec5-a424-8053b170b56e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x=2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "e99f9b1c-56a0-4d83-9347-5442eb1c7359",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "100"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "n*x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "f51a0295-0662-4ec4-a1fe-41e303de993f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "y=125"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "4f68b071-fa2d-4bb6-b95b-7f565f19efe0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "100.0"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "y-n/2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "14c74a57-39e3-4244-bdf3-a31630792f9a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "100.0"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "y-(n/2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "7137fcf6-4763-47a6-a0ea-3bafcab1c995",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "p=10.8"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "bd05c7d4-1fa6-41b6-82a3-d5c606ef5d7e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "q=5.2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "5f237b23-83ef-40f8-a474-3731708e1c97",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2.076923076923077"
+      ]
+     },
+     "execution_count": 29,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "p/q"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "id": "e671724e-703e-4f5b-949d-7fef42a96d09",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "l='yel'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "e6d075fe-1609-4ded-9d42-c18bb22e1fc6",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "m='low'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "379b1e20-abc9-4eca-88b0-b529cd850b93",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'yellow'"
+      ]
+     },
+     "execution_count": 41,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "l+m"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "id": "ab078a14-beb5-4039-a200-a6e5ccc31118",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "k='Enjoy the '"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "id": "721d2c15-edd0-4d9b-a1ec-4e3af8878dbe",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "c='tasty soup.'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "id": "431935ff-3786-41a0-adae-bc8f4f0c8537",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Enjoy the tasty soup.'"
+      ]
+     },
+     "execution_count": 47,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "k+c"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "id": "d9171114-18a3-4840-9a48-c9883c487c12",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "b='You really need '"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "id": "385bca75-238c-440a-a6f3-d78645707d00",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "d='get a puppy!'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "id": "82edfb12-75f1-41b3-9754-2ebd058e2516",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'You really need get a puppy!'"
+      ]
+     },
+     "execution_count": 53,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "b+d"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "id": "e531cab6-faaf-4335-a3c2-f166d8857bfe",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "z='Wake Up '"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "id": "260b952f-27c1-47d4-ab2f-74e7d89de6d1",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up Wake Up '"
+      ]
+     },
+     "execution_count": 61,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "z*100"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "fc349b38-3529-4524-85b2-44c34e2ed16e",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
